@@ -9,30 +9,11 @@ public:
          int sum=0;
        
        for(int i=0;i<s.size();i++){
-          if(s[i]=='I'&& s[i+1]=='V'){
-            sum+=4;
-           i=i+1;
+          if( (i+1< s.size()) && mp[s[i]]<mp[s[i+1]]){
+            sum-=mp[s[i]];
+           
           }
-          else if(s[i]=='C'&& s[i+1]=='M'){
-            sum+=900;
-            i=i+1;
-          }
-          else if(s[i]=='X'&& s[i+1]=='C'){
-            sum+=90;
-            i=i+1;
-          }
-         else if(s[i]=='I'&& s[i+1]=='X'){
-            sum+=9;
-            i=i+1;
-          }
-          else if(s[i]=='X'&& s[i+1]=='L'){
-            sum+=40;
-            i=i+1;
-          }
-          else if(s[i]=='C'&& s[i+1]=='D'){
-            sum+=400;
-            i=i+1;
-          }
+       
           else{
             sum += mp[s[i]];
           }}
